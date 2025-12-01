@@ -1,5 +1,5 @@
 import { navIcons } from "#constants"
-import { Routes, Route, data } from "react-router"
+import { Routes, Route} from "react-router"
 import { TextEditorNavbar } from "./navbar/TextEditorNAVBAR";
 import { MainNavBar } from "./navbar/MainNAVBAR";
 import { DiagramNavBar } from "./navbar/DiagramNAVBAR";
