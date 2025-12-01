@@ -5,6 +5,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router'
 import { ErrorComponent } from '#components/Error.tsx'
 import { Home } from '#components/Home.tsx'
 import { MacOSFolder } from '#components/MacOSFolder.tsx'
+import { Analytics } from "@vercel/analytics/react"
+
+
+<Analytics /> // for vercel analytics
 
 const router = createBrowserRouter([
   {
