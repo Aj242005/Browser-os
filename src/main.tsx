@@ -5,11 +5,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router'
 import { ErrorComponent } from '#components/Error.tsx'
 import { Home } from '#components/Home.tsx'
 import { MacOSFolder } from '#components/MacOSFolder.tsx'
-import { Analytics } from "@vercel/analytics/react"
+import { inject } from '@vercel/analytics'
 import { TextEditor } from '#components/TextEditor.tsx'
 
-
-<Analytics /> // for vercel analytics
 
 const router = createBrowserRouter([
   {
@@ -67,6 +65,11 @@ const router = createBrowserRouter([
 ])
 
 
+// Initialize Vercel Analytics
+inject()
+
 createRoot(document.getElementById('root')!).render(
-  <RouterProvider router={router} />
+  <>
+    <RouterProvider router={router} />
+  </>
 )
