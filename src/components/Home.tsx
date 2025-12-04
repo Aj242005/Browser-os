@@ -68,18 +68,18 @@ const setUpTextHover = (container: HTMLHeadingElement | null) => {
 export const Home = () => {
 
     const welcomeRef = useRef<HTMLHeadingElement | null>(null);
-
+    const parentRef = useRef<HTMLElement | null>(null);
 
     useGSAP(() => {
         setUpTextHover(welcomeRef.current);
     }, [])
-
+    
 
 
 
     return (<>
-        <Outlet />
-        <section id="welcome" >
+        <Outlet context={parentRef.current}/>
+        <section id="welcome" ref={parentRef}>
             <h1 ref={welcomeRef} className="mt-7" >
                 {renderText('Welcome', "text-9xl italic font-georama")}
             </h1>

@@ -6,6 +6,7 @@ import { ErrorComponent } from '#components/Error.tsx'
 import { Home } from '#components/Home.tsx'
 import { MacOSFolder } from '#components/MacOSFolder.tsx'
 import { Analytics } from "@vercel/analytics/react"
+import { TextEditor } from '#components/TextEditor.tsx'
 
 
 <Analytics /> // for vercel analytics
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'text-editor',
-        element: <></>,
+        element: <TextEditor />,
         children: [
           {
             path: 'test',
