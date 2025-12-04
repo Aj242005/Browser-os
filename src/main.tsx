@@ -9,8 +9,6 @@ import { Analytics } from "@vercel/analytics/react"
 import { TextEditor } from '#components/TextEditor.tsx'
 
 
-<Analytics /> // for vercel analytics
-
 const router = createBrowserRouter([
   {
     path: '',
@@ -68,5 +66,8 @@ const router = createBrowserRouter([
 
 
 createRoot(document.getElementById('root')!).render(
-  <RouterProvider router={router} />
+  <>
+    <RouterProvider router={router} />
+    <Analytics />
+  </>
 )
